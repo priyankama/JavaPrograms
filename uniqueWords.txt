@@ -1,0 +1,23 @@
+//import the necessary packages if needed
+import java.util.*;     
+@SuppressWarnings("unchecked")//Do not delete this line
+public class UniqueWords
+{
+         public static void main (String[] args) {
+             Scanner sc=new Scanner(System.in);
+             System.out.println("Enter Student's Article");
+             String str = (sc.nextLine()).toLowerCase();
+             String words[] = str.split("[,;:.?! ]+");
+             System.out.println("Number of words "+words.length);
+             Set<String> UniqueWords = new TreeSet<String>();
+             for(int i=0;i<words.length;i++)
+                UniqueWords.add(words[i]);
+            System.out.println("Number of unique words "+UniqueWords.size());
+            System.out.println("The words are");
+            int i=1;
+            for(Object o:UniqueWords){
+                System.out.println(i+". "+o);
+                i++;
+            }
+         }
+}

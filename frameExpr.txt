@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main{
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String[]ss=s.split("[\\*+-/=%]");
+        if(ss.length==3){
+            
+            
+            int n1=Integer.parseInt(ss[0]), n2=Integer.parseInt(ss[1]), n3=Integer.parseInt(ss[2]);
+               
+            if((n1+n2)==n3){
+               System.out.println(n1+"+"+n2+"="+n3);
+             }
+            else if((n1-n2)==n3){
+               System.out.println(n1+"-"+n2+"="+n3);
+             }
+            else if((n1*n2)==n3){
+               System.out.println(n1+"*"+n2+"="+n3);
+             }
+            else if((n1/n2)==n3){
+                System.out.println(n1+"/"+n2+"="+n3);
+               }
+                else{
+                  System.out.println("Invalid Input");
+               }
+              }
+               else{
+                  System.out.println("Invalid Input");
+     }
+  }
+}
